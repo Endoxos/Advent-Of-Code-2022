@@ -4,6 +4,7 @@ function valider() {
   var lignes = input.split("\n");
   let somme = 0;
   let length = (lignes.length)/3;
+  s
 
   for (var i = 0; i < length; i++) {
 
