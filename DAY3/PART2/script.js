@@ -3,15 +3,17 @@ function valider() {
   var input = document.getElementById("input").value;
   var lignes = input.split("\n");
   let somme = 0;
-  let length = (lignes.length)/3;
+  let length = (lignes.length);
 
+  for (var i = 0; i < lignes.length; i+=3) {
 
-  for (var i = 0; i < length; i++) {
-
-    let ligne1 = lignes[i];
+    var ligne1 = lignes[i];
     let ligne2 = lignes[i + 1];
     let ligne3 = lignes[i + 2];
 
+    console.log(ligne1);
+    console.log(ligne2);
+    console.log(ligne3);
 
     let array1 = [];
     for (var j = 0; j < ligne1.length; j++) {
@@ -143,6 +145,7 @@ function valider() {
     else {
       console.log("ERROR");
     }
+
   }
 
 
