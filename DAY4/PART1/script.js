@@ -12,11 +12,14 @@ function valider() {
     console.log(lignes[i]);
 
 
-    if (chiffres1[0] >= chiffres2[0]) {
-      
+    if (chiffres1[0] <= chiffres2[0] && chiffres2[1] <= chiffres1[1] || chiffres2[0] <= chiffres1[0] && chiffres1[1] <= chiffres2[1]){
+      console.log("oui");
+      somme += 1;
     } else {
-
+      console.log("no");
     }
+
+
 
     const p_replace = document.createElement('p');
     p_replace.append();
