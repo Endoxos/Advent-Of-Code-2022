@@ -1,12 +1,13 @@
-let array1 = ['W','R','F'];
-let array2 = ['T','H','M','C','D','V','W','P'];
-let array3 = ['P','M','Z','N','L'];
-let array4 = ['J','C','H','R'];
-let array5 = ['C','P','G','H','Q','T','B'];
-let array6 = ['G','C','W','L','F','Z'];
-let array7 = ['W','V','L','Q','Z','J','G','C'];
-let array8 = ['P','N','R','F','W','T','V','C'];
-let array9 = ['J','W','H','G','R','S','V'];
+let array1 = ['W', 'R', 'F'];
+let array2 = ['T', 'H', 'M', 'C', 'D', 'V', 'W', 'P'];
+let array3 = ['P', 'M', 'Z', 'N', 'L'];
+let array4 = ['J', 'C', 'H', 'R'];
+let array5 = ['C', 'P', 'G', 'H', 'Q', 'T', 'B'];
+let array6 = ['G', 'C', 'W', 'L', 'F', 'Z'];
+let array7 = ['W', 'V', 'L', 'Q', 'Z', 'J', 'G', 'C'];
+let array8 = ['P', 'N', 'R', 'F', 'W', 'T', 'V', 'C'];
+let array9 = ['J', 'W', 'H', 'G', 'R', 'S', 'V'];
+let arrayReverse = [];
 
 
 function valider() {
@@ -43,39 +44,42 @@ function valider() {
       console.log(to_num);
     }
 
+    arrayReverse = [];
     for (var j = 0; j < move_num; j++) {
       let letter = "";
       if (from_num === 1) {
         letter = array1.pop();
-        to(to_num, letter);
+        arrayReverse.push(letter);
       } else if (from_num === 2) {
         letter = array2.pop();
-        to(to_num, letter);
+        arrayReverse.push(letter);
       } else if (from_num === 3) {
         letter = array3.pop();
-        to(to_num, letter);
+        arrayReverse.push(letter);
       } else if (from_num === 4) {
         letter = array4.pop();
-        to(to_num, letter);
+        arrayReverse.push(letter);
       } else if (from_num === 5) {
         letter = array5.pop();
-        to(to_num, letter);
+        arrayReverse.push(letter);
       } else if (from_num === 6) {
         letter = array6.pop();
-        to(to_num, letter);
+        arrayReverse.push(letter);
       } else if (from_num === 7) {
         letter = array7.pop();
-        to(to_num, letter);
+        arrayReverse.push(letter);
       } else if (from_num === 8) {
         letter = array8.pop();
-        to(to_num, letter);
+        arrayReverse.push(letter);
       } else if (from_num === 9) {
         letter = array9.pop();
-        to(to_num, letter);
+        arrayReverse.push(letter);
       } else {
         console.log("ERROR");
       }
     }
+    arrayReverse.reverse();
+    to(to_num);
   }
 
   somme += array1[array1.length - 1];
@@ -100,30 +104,31 @@ function valider() {
 }
 
 
-function to(to_num, letter) {
-  if (to_num === 1) {
-    array1.push(letter);
-  } else if (to_num === 2) {
-    array2.push(letter);
-  } else if (to_num === 3) {
-    array3.push(letter);
-  } else if (to_num === 4) {
-    array4.push(letter);
-  } else if (to_num === 5) {
-    array5.push(letter);
-  } else if (to_num === 6) {
-    array6.push(letter);
-  } else if (to_num === 7) {
-    array7.push(letter);
-  } else if (to_num === 8) {
-    array8.push(letter);
-  } else if (to_num === 9) {
-    array9.push(letter);
-  } else {
-    console.log("ERROR");
+function to(to_num) {
+  for (var k = 0; k < arrayReverse.length; k++) {
+    if (to_num === 1) {
+      array1.push(arrayReverse[k]);
+    } else if (to_num === 2) {
+      array2.push(arrayReverse[k]);
+    } else if (to_num === 3) {
+      array3.push(arrayReverse[k]);
+    } else if (to_num === 4) {
+      array4.push(arrayReverse[k]);
+    } else if (to_num === 5) {
+      array5.push(arrayReverse[k]);
+    } else if (to_num === 6) {
+      array6.push(arrayReverse[k]);
+    } else if (to_num === 7) {
+      array7.push(arrayReverse[k]);
+    } else if (to_num === 8) {
+      array8.push(arrayReverse[k]);
+    } else if (to_num === 9) {
+      array9.push(arrayReverse[k]);
+    } else {
+      console.log("ERROR");
+    }
   }
 }
-
 
 // let array1 = ['W','R','F'];
 // let array2 = ['T','H','M','C','D','V','W','P'];
